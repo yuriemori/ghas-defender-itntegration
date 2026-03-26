@@ -24,6 +24,11 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bo
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('<h1>Welcome to the Primer Express App</h1><ul><li><a href="/api?name=test">/api</a></li><li><a href="/api/health">/api/health</a></li><li><a href="/hello?name=world">/hello</a></li></ul>');
+});
+
 // API Routes
 app.get('/api', (req, res) => {
   res.send(`API, ${req.query.name}!`);
