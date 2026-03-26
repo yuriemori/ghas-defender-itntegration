@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "express": "^4.21.2",
-        "morgan": "^1.10.0"
+        "morgan": "^1.10.1"
     },
     "devDependencies": {
         "globals": "^16.1.0",
